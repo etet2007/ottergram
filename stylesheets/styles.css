@@ -1,0 +1,147 @@
+/* 选择器和样式声明 
+选择器描述样式将应用于哪些元素。
+样式声明定义要应用的样式。每一条声明由属性名和属性值构成。
+*/
+
+/* 关系选择器由两个选择器（如类名选择器或元素选择器）和一个连接符组成，该连接符决定
+了两个选择器之间的关系。为理解关系选择器如何工作，请记住浏览器是从右向左解析选择器的。
+后代选择器 子选择器> 兄弟选择器~  相邻兄弟选择器 +
+
+类名选择器.logo-text 属性选择器 元素选择器body ID选择器
+*/
+@font-face {
+  font-family: 'airstreamregular';
+  src: url('fonts/Airstream-webfont.eot');
+  src: url('fonts/Airstream-webfont.eot?#iefix') format('embedded-opentype'),
+    url('fonts/Airstream-webfont.woff') format('woff'),
+    url('fonts/Airstream-webfont.ttf') format('truetype'),
+    url('fonts/Airstream-webfont.svg#airstreamregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'lakeshore';
+  src: url('fonts/LAKESHOR-webfont.eot');
+  src: url('fonts/LAKESHOR-webfont.eot?#iefix') format('embedded-opentype'),
+    url('fonts/LAKESHOR-webfont.woff') format('woff'),
+    url('fonts/LAKESHOR-webfont.ttf') format('truetype'),
+    url('fonts/LAKESHOR-webfont.svg#lakeshore') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* flex容器能够控制其子元素（flex item）的布局 */
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+
+  font-size: 10px;
+  background: rgb(149, 194, 215);
+}
+
+a {
+  text-decoration: none;
+}
+
+.main-header {
+  /*  grow shrink basis 
+  下面可以解读为 无须进行拉伸，如有必要将会收缩，自动计算大小
+  */
+  flex: 0 1 auto;
+}
+
+.logo-text {
+  background: white;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: lakeshore;
+  font-size: 37px;
+}
+
+.main-content {
+  /* 尽可能拉伸 */
+  flex: 1 1 auto;
+  /* 使用flex属性设置flex项目尺寸，并设置比较重要的某一固定尺寸（如.detailimage的宽度）才是正确的方式。 */
+  display: flex;
+  flex-direction: column;
+}
+
+.thumbnail-item {
+  display: inline-block;
+  /* 如display: block一般展现，但不会产生换行 */
+  min-width: 120px;
+  max-width: 120px;
+  /* 声明两次是一种提供回退值的技巧 */
+  border: 1px solid rgb(100%, 100%, 100%);
+  border: 1px solid rgba(100%, 100%, 100%, 0.8);
+}
+
+.thumbnail-list {
+  flex: 0 1 auto;
+  /* 告诉浏览器将它绘制在其他order值更小的元素后面 */
+  order: 2;
+  display: flex;
+  /* 决定flex容器如何控制flex item在主轴方向上的绘制方式。 */
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+
+  /* 禁止换行并允许滚动 */
+  white-space: nowrap;
+  overflow-x: auto;
+}
+
+.thumbnail-image {
+  /* 图片默认是display: inline的，它们的渲染规则类似于文
+本。渲染文本时，字母是沿着一条基线绘制的。某些字母，如p、 q、 y等，有一个下降部分——
+也就是位于基线下面的尾部。为了容纳它们，基线之下会留有一些空白。 */
+  display: block;
+  width: 100%;
+}
+
+.thumbnail-title {
+  /* 使这些元素可以占据包含它们的元素的完整宽度。 */
+  display: block;
+  margin: 0;
+  padding: 4px 10px;
+
+  background: rgb(96, 125, 139);
+  color: rgb(202, 238, 255);
+
+  font-size: 18px;
+}
+
+.detail-image-container {
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.detail-image-frame {
+  /* 作为绝对定位item的container */
+  position: relative;
+  text-align: center;
+}
+
+.detail-image {
+  width: 90%;
+}
+
+.detail-image-title {
+  position: absolute;
+bottom: -16px;
+left: 4px;
+
+  font-family: airstreamregular;
+  color: white;
+  text-shadow: rgba(0, 0, 0, 0.9) 1px 2px 9px;
+  font-size: 40px;
+}
