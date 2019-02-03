@@ -5,6 +5,10 @@
 <head>
   <!-- head中包含文档信息，以及浏览器如何处理文档的相关信息，比如说文档标题、页面使用的CSS/JavaScript文件、文档上次修改的时间等都包括在head中。 -->
   <meta charset="utf-8">
+  <!-- 布局视口的宽度与设备屏宽相同 不然手机上效果很差
+  布局视口：虚拟屏幕，大于设备实际屏幕，用于计算页面布局
+  -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ottergram</title>
   <!-- 通过<link>标签，可以给HTML文档附加外部样式表。它有两个属性，向浏览器提供更多关于该标签用途的信息。 -->
   <!-- 将rel（即relationship）属性设置为"stylesheet"，让浏览器知道链接的文档提供的是样式信息。  -->
@@ -100,6 +104,6 @@
         <span class="detail-image-title">Stayin' Alive</span>
       </div>
     </div>
-    
+
   </main>
 </body>
