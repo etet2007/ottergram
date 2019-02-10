@@ -28,68 +28,37 @@
   <main class="main-content">
     <ul class="thumbnail-list">
       <li class="thumbnail-item">
-        <a href="#">
+        <a href="img/otter1.jpg" data-image-role="trigger" data-image-title="Stayin' Alive" data-image-url="img/otter1.jpg">
           <!-- <a>是锚标签。锚标签使页面元素可点击，从而将用户带到另一个页面。它们通常被称为“链接”，
           锚标签有一个名为href的属性，用于表明锚所指向的资源，其值通常是一个Web地址。但有
           时候你并不想去别的地方（这里就是如此），所以将“空”值#赋给href属性。这样一来，点击
           图片时页面就会滚动到顶部。 -->
           <!-- class是样式的“钩子” 类名可用于标记一组HTML元素，通常用于添加样式。有了类名，为水獭名字添加样式就很方便了。 -->
-          <img class="thumbnail-image" src="img/otter1.jpg" alt="Barry the Otter">
+          <img class="thumbnail-image" src="img/otter1.jpg" alt="">
           <!-- 自闭合标签 -->
           <span class="thumbnail-title">Barry</span>
         </a>
       </li>
       <li class="thumbnail-item">
-        <a href="#">
-          <img class="thumbnail-image" src="img/otter2.jpg" alt="Barry the Otter">
+        <a href="img/otter2.jpg" data-image-role="trigger" data-image-title="How Deep Is Your Love" data-image-url="img/otter2.jpg">
+          <img class="thumbnail-image" src="img/otter2.jpg" alt="">
           <span class="thumbnail-title">Robin</span>
         </a>
       </li>
       <li class="thumbnail-item">
-        <a href="#">
+        <a href="img/otter3.jpg" data-image-role="trigger" data-image-title="You Should Be Dancing" data-image-url="img/otter3.jpg">
           <img class="thumbnail-image" src="img/otter3.jpg" alt="Barry the Otter">
           <span class="thumbnail-title">Maurice</span>
         </a>
       </li>
       <li class="thumbnail-item">
-        <a href="#">
+        <a href="img/otter4.jpg" data-image-role="trigger" data-image-title="Night Fever" data-image-url="img/otter4.jpg">
           <img class="thumbnail-image" src="img/otter4.jpg" alt="Barry the Otter">
           <span class="thumbnail-title">Lesley</span>
         </a>
       </li>
       <li class="thumbnail-item">
-        <a href="#">
-          <img class="thumbnail-image" src="img/otter5.jpg" alt="2 the Otter">
-          <span class="thumbnail-title">Barbara</span>
-        </a>
-      </li>
-
-      <li class="thumbnail-item">
-        <a href="#">
-          <img class="thumbnail-image" src="img/otter1.jpg" alt="Barry the Otter">
-          <span class="thumbnail-title">Barry</span>
-        </a>
-      </li>
-      <li class="thumbnail-item">
-        <a href="#">
-          <img class="thumbnail-image" src="img/otter2.jpg" alt="Barry the Otter">
-          <span class="thumbnail-title">Robin</span>
-        </a>
-      </li>
-      <li class="thumbnail-item">
-        <a href="#">
-          <img class="thumbnail-image" src="img/otter3.jpg" alt="Barry the Otter">
-          <span class="thumbnail-title">Maurice</span>
-        </a>
-      </li>
-      <li class="thumbnail-item">
-        <a href="#">
-          <img class="thumbnail-image" src="img/otter4.jpg" alt="Barry the Otter">
-          <span class="thumbnail-title">Lesley</span>
-        </a>
-      </li>
-      <li class="thumbnail-item">
-        <a href="#">
+        <a href="img/otter5.jpg" data-image-role="trigger" data-image-title="To Love Somebody" data-image-url="img/otter5.jpg">
           <img class="thumbnail-image" src="img/otter5.jpg" alt="2 the Otter">
           <span class="thumbnail-title">Barbara</span>
         </a>
@@ -100,10 +69,11 @@
     <div class="detail-image-container">
       <!-- 它会限制.detail-image的尺寸，并作为.detail-image-title的定位参照。 -->
       <div class="detail-image-frame">
-        <img class="detail-image" src="img/otter1.jpg" alt="">
-        <span class="detail-image-title">Stayin' Alive</span>
+        <img class="detail-image" data-image-role="target" src="img/otter1.jpg" alt="">
+        <span class="detail-image-title" data-image-role="title">Stayin' Alive</span>
       </div>
     </div>
 
   </main>
+  <script src="scripts/main.js" charset="utf-8"></script>
 </body>
